@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <title>Weather</title>
+</head>
+
+<body>
+  <!-- NAVEBAR SECTION -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container py-4 ">
+      <a class="navbar-brand" href="#">
+        <img src="imgs/logo.png" class="logo" alt="">
+        <div class="logo-type">
+          <h5 class="site-title">Weather</h5>
+          <small class="site-description">tagline goes here</small>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="circle"> <i class="fa-solid fa-bars p-3"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Live cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="container">
+      <div class="form-search position-relative">
+        <input type="text" placeholder="Find your location..." id="searchLocation" class=" p-3 rounded-5 border-0 ">
+        <button class="position-absolute bg-primary rounded-5 border-0">Find</button>
+      </div>
+    </div>
+  </div>
+  <!-- FORECAST SECTION -->
+  <div class="forecast-table my-5">
+    <div class="container">
+        <div class="row forecast-row">
+            <!-- Today forecast  -->
+            <div class="col-md-4 forecast">
+                <div class="today inner">
+                    <div class="forecast-header d-flex justify-content-between px-2 py-2" id="today">
+                        <div id="dayToday"></div>
+                        <div id="dateToday"></div>
+                    </div>
+                    <div class="forecast-content p-4">
+                        <div id="countryName"></div>
+                        <div class="forecast-degree">
+                            <div class="num text-white" >
+                                <span id="degreeToday"></span><sup>o</sup>C</span>
+                            </div>
+                            <div class="forecast-icon">
+                                <img src="" id="imgToday" alt="" width="90" >
+                            </div>
+                        </div>
+                        <div class="castum fs-6 text-primary" id="conditionToday"></div>
+                        <div class="icons d-flex ">
+                            <div class="me-4 d-flex ">
+                                <i class="fa fa-umbrella"></i>
+                                <span id="humidityToday">
+                                </span>%
+                            </div>
+                            <div class="me-4 d-flex ">
+                                <i class="fa fa-wind"></i>
+                                <span id="windSpeedToday">
+                                </span>Km/h
+                            </div>
+                            <div class="me-4 d-flex ">
+                                <i class="fa-regular fa-compass"></i>
+                                <span id="windDirectionToday">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- Tomorrow day forecast  -->
+                <div class="col-md-4 forecast">
+                    <div class="inner text-center">
+                        <div class="forecast-header py-2">
+                            <div id="Tday" class="day">tusday</div>
+                        </div>
+                        <div class="forecast-content">
+                            <div class="forecast-icon mb-5">
+                              <img src="" id="imgT" alt="" width="90">
+                            </div>
+                            <div class="degree">
+                                <div id="Ttemp1" class="num text-white fs-4">
+                                    <sup>o</sup>C
+                                </div>
+                                <div id="Ttemp2" class="num fs-6 fw-light">
+                                   <sup>o</sup>C
+                                </div>
+                            </div>
+                            <div id="Tcondition" class="castum fs-6 text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- After Tomorrow day forecast  -->
+                <div class="col-md-4 forecast">
+                    <div class="inner text-center">
+                        <div class="forecast-header py-2">
+                            <div id="AfterTday" class="day"></div>
+                        </div>
+                        <div class="forecast-content text-center">
+                            <div class="forecast-icon mb-5">
+                              <img src="" id="imgAfterT" alt="" width="90">
+                            </div>
+                            <div class="degree">
+                                <div id="AfterTtemp1" class="num text-white fs-4">
+                                   <sup>o</sup>C
+                                </div>
+                                <div id="AfterTtemp2" class="num fs-6 fw-light">
+                                   <sup>o</sup>C
+                                </div>
+                            </div>
+                            <div id="AfterTcondition" class="castum fs-6 text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+   
+
+  <!-- FOOTER SECTION -->
+  <footer class="End-section">
+    <div class="container">
+      <div class="row  py-4">
+        <div class="col-md-8">
+          <div class="inner">
+            <div class="subscribtion align-items-center position-relative">
+              <input type="text" placeholder="Enter your email to subscribe..." id="searchLocation" class=" p-3 rounded-5 border-0 ">
+              <button class="position-absolute bg-primary rounded-5 border-0">subscribtion</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="social d-flex px-5 ">
+            <div class="circle">
+              <i class="fa-brands fa-facebook fa-2x"></i>
+            </div>
+            <div class="circle ">
+              <i class="fa-brands fa-instagram  fa-2x"></i>
+            </div>
+            <div class="circle ">
+              <i class="fa-brands fa-twitter  fa-2x"></i>
+            </div>
+            <div class="circle ">
+              <i class="fa-brands fa-linkedin  fa-2x"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </footer>
+ 
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
